@@ -1,0 +1,25 @@
+ActsAsTimecode
+==============
+
+A simple plugin to transform a field stored as seconds into a timecode in the format of HH:MM:SS.
+
+The timecode can be set in any of the following formats:
+HH:MM:SS:FF
+HH:MM:SS
+MM:SS
+SS
+
+Frames will be converted to seconds and rounded, based on the :fps value (default fps = 30)
+
+Example
+=======
+
+class Video < ActiveRecord::Base
+  acts_as_timecode :column => :duration
+end
+
+video.timecode = "01:23:45"
+video.duration = 5025
+
+
+Copyright (c) 2009 Brian Michalski, released under the MIT license
