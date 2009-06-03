@@ -21,3 +21,17 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "acts-as-timecode"
+    gemspec.summary = "ActsAsTimecode provides a timecode field, converting a duration to HH:MM:SS:FF"
+    gemspec.email = "bmichalski@gmail.com"
+    gemspec.homepage = "http://www.brispace.net"
+    gemspec.description = "ActsAsTimecode provides a timecode field, converting a duration to HH:MM:SS:FF"
+    gemspec.authors = ["Brian Michalski"]
+  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+end
