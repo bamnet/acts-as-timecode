@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
      "README",
      "Rakefile",
      "VERSION",
+     "acts-as-timecode.gemspec",
      "init.rb",
      "lib/acts_as_timecode.rb",
      "test/acts_as_timecode_test.rb"
